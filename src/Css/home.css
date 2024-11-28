@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Main content wrapper */
+.content {
+    display: flex;
+    align-items: center; /* Vertically center the content */
+    justify-content: space-between; /* Space out the left and right content */
+    padding: 2rem 3rem; /* Reduced padding around the content */
+    height: 100vh; /* Full height of viewport */
+}
+/* Button container */
+.button-container {
+    margin-top: 2rem;
+}
+
+/* Resume button styling */
+.resume-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #3498db; /* Blue background */
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Button hover effect */
+.resume-button:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+    transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+/* Button focus effect */
+.resume-button:focus {
+    outline: none;
+}
+
+/* Right side content (Image) */
+.content-right {
+    width: 50%; /* Adjust width as needed */
+    display: flex; /* Enables flexbox layout */
+    justify-content: center; /* Centers image horizontally */
+    align-items: center; /* Centers image vertically */
+    height: 100%; /* Ensure the div has height, so the image can be centered vertically */
+}
+
+.content-right img {
+    max-width: 80%; /* Adjust image size */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the image covers the container */
+    padding-bottom: 5rem;
+}
+
+/* Left side content */
+.content-left {
+    padding-top: 2rem; /* Reduced top padding */
+    padding-left: 2rem; /* Adjusted left padding */
+    width: 60%; /* Adjust width of the left content */
+}
+
+.content-left p {
+    font-size: 1.2rem; /* Slightly larger text for better readability */
+    color: #333; /* Dark text color */
+    width: 100%; /* Ensure the paragraph spans full width */
+    line-height: 1.6; /* Increased line height for readability */
+}
+
+.strong p {
+    text-decoration: solid;
+    font-size: 2rem; /* Increased font size */
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    color: #333; /* Dark text color */
+}
+
+.strong span {
+    text-decoration: solid;
+    font-size: 2.5rem; /* Larger font size for emphasis */
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    color: #2c3e50; /* Darker color for emphasis */
+}
+
+/* Typing animation */
+.typing {
+    font-size: 2rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden; /* Hide overflowing text */
+    border-right: 2px solid black; /* Cursor effect */
+    animation: typing 20s steps(30) infinite, blink 0.6s step-end infinite; /* Adjusted animation time */
+}
+
+/* Typing effect */
+@keyframes typing {
+    0% {
+        width: 0; /* Start with no visible text */
+    }
+    50% {
+        width: 25ch; /* Adjust to match the number of characters in your text */
+    }
+    100% {
+        width: 0; /* Reset to start */
+    }
+}
+
+/* Blinking cursor effect */
+@keyframes blink {
+    50% {
+        border-color: transparent; /* Make cursor invisible for blinking effect */
+    }
+}

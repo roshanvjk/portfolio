@@ -1,0 +1,62 @@
+.footer {
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .footer-links a {
+    display: inline-block;
+    text-decoration: none;
+  }
+  
+  .footer-icon {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+  }
+  
+  .footer-icon:hover {
+    transform: scale(1.2);
+  }
+  
+  .footer-info p {
+    margin: 5px 0;
+  }
+  
+  .footer-info a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-info a:hover {
+    color: #3498db;
+  }
+  
+  /* New styles for reducing the size of the phone and email icons */
+  .footer-icon-phone, .footer-icon-email {
+    width: 20px; /* Reduced size */
+    height: 20px; /* Reduced size */
+    margin-right: 8px; /* Space between icon and text */
+    vertical-align: middle; /* Align icon with text */
+  }
+  
+  .footer-content {
+    margin-top: 20px;
+  }
+  
+  .footer-rights {
+    font-style: italic;
+    color: #ccc;
+    margin-top: 15px;
+  }
+  

@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sriracha&display=swap');
+
+.navbar {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Adjust padding for the navbar */
+    position: sticky; /* Makes the navbar sticky */
+    top: 0; /* Ensures the navbar stays at the top */
+    z-index: 1000; /* Ensures the navbar stays on top of other content */
+    background-color: #fff; /* Optional: white background */
+}
+
+.left-navbar {
+    display: flex; /* Flexbox for aligning items horizontally */
+    align-items: center; /* Vertically center items */
+    padding-left: 3rem; /* Adjust the left padding */
+}
+
+.left-navbar h1 {
+    margin: 0;
+    font-size: 28px; /* Font size for logo/title */
+    font-weight: 600; /* Bold font weight */
+    color: #000; /* Text color black */
+    margin-right: 10px; /* Space between title and flag */
+}
+
+.right-navbar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 50%;
+}
+
+.right-navbar a {
+    text-decoration: none;
+    color: #000; /* Text color black */
+    font-size: 18px; /* Font size for links */
+    padding: 12px; /* Padding for links */
+    border-radius: 5px; /* Rounded corners for links */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover */
+}
+
+.right-navbar a:hover {
+    background-color: #555; /* Hover background */
+    color: #f1f1f1; /* Hover text color */
+}
+
+/* Indian flag styling */
+.indian-flag {
+    width: 40px;  /* Set the size of the flag */
+    height: auto;
+    animation: wave 2s ease-in-out infinite;  /* Waving animation */
+}
+
+/* Waving animation */
+@keyframes wave {
+    0% {
+        transform: rotate(0deg) translateY(0) skew(0deg);
+    }
+    25% {
+        transform: rotate(3deg) translateY(5px) skew(2deg);
+    }
+    50% {
+        transform: rotate(0deg) translateY(0) skew(0deg);
+    }
+    75% {
+        transform: rotate(-3deg) translateY(-5px) skew(-2deg);
+    }
+    100% {
+        transform: rotate(0deg) translateY(0) skew(0deg);
+    }
+}

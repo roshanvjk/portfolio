@@ -1,0 +1,86 @@
+/* General container for the academic journey */
+.container {
+    padding: 2rem;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+/* Card container to display cards in a row */
+.card-container {
+    display: flex; /* Use flexbox layout */
+    justify-content: space-evenly; /* Space between the cards */
+    gap: 2rem; /* Space between each card */
+    flex-wrap: wrap; /* Ensures cards wrap on smaller screens */
+}
+
+/* Individual card styling */
+.card {
+    width: 32%; /* 3 cards in a row, each card will take about 32% of the width */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    background-color: #fff;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Card hover effect */
+.card:hover {
+    transform: translateY(-10px); /* Lift the card */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+/* Icon style inside each card */
+.icon {
+    font-size: 3rem;
+    color: #3498db; /* Blue color for icons */
+    margin-bottom: 1rem;
+}
+
+/* Styling for the details inside the card */
+.details h3 {
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: 500;
+}
+
+.details h2 {
+    font-size: 1.6rem;
+    color: #333;
+    font-weight: 600;
+    margin: 0.5rem 0;
+}
+
+.details p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Location icon style */
+.location-icon {
+    font-size: 1.2rem;
+    color: #3498db; /* Same blue as icons */
+    margin-right: 0.5rem;
+}
+
+/* SSLC card center styling */
+.sslc-card {
+    width: 100%; /* Make SSLC card full width on all screens */
+    display: flex;
+    justify-content: center; /* Center the card */
+    margin-top: 2rem; /* Add spacing above */
+    flex-wrap: wrap; /* Ensures content wraps */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .card {
+        width: 100%; /* Cards take up full width on smaller screens */
+    }
+}
