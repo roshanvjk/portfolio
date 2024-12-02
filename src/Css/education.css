@@ -12,15 +12,17 @@ h1 {
 
 /* Card container to display cards in a row */
 .card-container {
-    display: flex; /* Use flexbox layout */
-    justify-content: space-evenly; /* Space between the cards */
-    gap: 2rem; /* Space between each card */
-    flex-wrap: wrap; /* Ensures cards wrap on smaller screens */
+    display: grid; /* Use CSS Grid for better control */
+    grid-template-columns: repeat(3, 1fr); /* Three cards in a row */
+    gap: 2rem; /* Space between cards */
+    width: 100%;
+    justify-items: center; /* Center align cards */
 }
 
 /* Individual card styling */
 .card {
-    width: 32%; /* 3 cards in a row, each card will take about 32% of the width */
+    width: 100%; /* Card takes full column width */
+    max-width: 300px; /* Prevent the card from becoming too large */
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -78,9 +80,41 @@ h1 {
     flex-wrap: wrap; /* Ensures content wraps */
 }
 
-/* Responsive design for smaller screens */
-@media (max-width: 768px) {
+/* Responsive design for medium screens (tablets) */
+@media (max-width: 992px) {
+    .card-container {
+        grid-template-columns: repeat(2, 1fr); /* Two cards in a row */
+    }
+}
+
+/* Responsive design for small screens (mobile devices) */
+@media (max-width: 576px) {
+    .card-container {
+        grid-template-columns: 1fr; /* One card per row */
+    }
+
+    h1 {
+        font-size: 2rem; /* Smaller font size for the title */
+    }
+
     .card {
-        width: 100%; /* Cards take up full width on smaller screens */
+        padding: 1rem; /* Reduce padding for smaller screens */
+        text-align: center; /* Center-align card content */
+    }
+
+    .icon {
+        font-size: 2.5rem; /* Reduce icon size */
+    }
+
+    .details h2 {
+        font-size: 1.4rem; /* Smaller heading size */
+    }
+
+    .details h3 {
+        font-size: 1rem; /* Smaller subheading size */
+    }
+
+    .details p {
+        font-size: 0.9rem; /* Adjust paragraph font size */
     }
 }

@@ -11,6 +11,7 @@ import '../Css/footer.css';
 function Footer() {
   return (
     <div className="footer">
+      <h2>Roshanvijay J K</h2>
       <div className="footer-links">
         <a href="https://www.instagram.com/______.roshan.______/" target="_blank" rel="noopener noreferrer">
           <img src={InstagramIcon} className="footer-icon" alt="Instagram" />

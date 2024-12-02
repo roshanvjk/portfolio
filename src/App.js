@@ -4,6 +4,7 @@ import Footer from './Components/footer';
 import HomePage from './Components/homepage';
 import TopBar from './Components/NavBar';
 import Projects from './Components/projects';
+import TechStack from './Components/techstack';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <HomePage/>
       <AcademicJourney/>
       <Projects/>
+      {/* <TechStack/> */}
       <Footer/>
     </div>
   );
