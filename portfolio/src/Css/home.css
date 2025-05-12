@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Main content wrapper */
+.content {
+    display: flex;
+    flex-wrap: wrap; /* Allow content to wrap on smaller screens */
+    align-items: center; /* Vertically center content */
+    justify-content: space-between; /* Space out the left and right content */
+    padding: 2rem 1.5rem; /* Adjusted padding for better responsiveness */
+    height: auto; /* Remove fixed height for flexible layout */
+    min-height: 100vh; /* Ensure it covers the viewport height */
+}
+
+/* Button container */
+.button-container {
+    margin-top: 1.5rem; /* Adjusted spacing */
+}
+
+/* Resume button styling */
+.resume-button {
+    display: inline-block;
+    padding: 12px 24px; /* Adjusted padding for better click targets */
+    font-size: 1rem; /* Scaled font size for responsiveness */
+    color: #fff;
+    background-color: #3498db; /* Blue background */
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Button hover and focus effect */
+.resume-button:hover,
+.resume-button:focus {
+    background-color: #2980b9; /* Darker blue on hover */
+    transform: scale(1.05); /* Slightly enlarge the button */
+    outline: none;
+}
+
+/* Right side content (Image) */
+.content-right {
+    width: 45%; /* Adjust width for balance */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem; /* Add spacing for smaller screens */
+}
+
+.content-right img {
+    max-width: 100%; /* Image scales within its container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover;
+}
+
+/* Left side content */
+.content-left {
+    width: 50%; /* Adjust width for balance */
+    margin-top: 1.5rem; /* Add spacing for smaller screens */
+}
+
+.content-left p {
+    font-size: 1rem; /* Scale text size for smaller screens */
+    color: #333;
+    line-height: 1.6; /* Improved readability */
+}
+
+/* Strong emphasis */
+.strong p {
+    font-size: 1.8rem; /* Adjusted size for responsiveness */
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    color: #333;
+}
+
+.strong span {
+    font-size: 2rem; /* Adjusted for emphasis */
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+/* Typing animation */
+.typing {
+    font-size: 1.8rem; /* Adjusted for smaller screens */
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid black;
+    animation: typing 4s steps(30, end) infinite, blink 0.6s step-end infinite;
+}
+
+/* Typing effect */
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 25ch; /* Match the text length */
+    }
+    100% {
+        width: 0;
+    }
+}
+
+/* Blinking cursor effect */
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column; /* Stack content vertically */
+        padding: 1.5rem;
+    }
+
+    .content-left, .content-right {
+        width: 100%; /* Full width for each section */
+    }
+
+    .content-left p, .typing {
+        font-size: 1rem; /* Smaller text size */
+    }
+
+    .strong p {
+        font-size: 1.5rem;
+    }
+
+    .strong span {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .resume-button {
+        font-size: 0.9rem; /* Smaller button text */
+        padding: 10px 18px; /* Compact padding */
+    }
+
+    .content-left p {
+        font-size: 0.9rem; /* Smaller text size for readability */
+    }
+
+    .strong p {
+        font-size: 1.2rem;
+    }
+
+    .strong span {
+        font-size: 1.5rem;
+    }
+
+    .typing {
+        font-size: 1.4rem;
+    }
+}

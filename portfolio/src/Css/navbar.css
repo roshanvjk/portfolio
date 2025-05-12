@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sriracha&display=swap');
+
+.navbar {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for better visibility */
+}
+
+/* Left navbar (logo and flag) */
+.left-navbar {
+    display: flex;
+    align-items: center;
+    padding-left: 1rem; /* Adjusted padding for smaller screens */
+}
+
+.left-navbar h1 {
+    margin: 0;
+    font-size: 24px; /* Scaled down font size for smaller screens */
+    font-weight: 600;
+    color: #000;
+    margin-right: 10px;
+}
+
+/* Indian flag styling */
+.indian-flag {
+    width: 35px; /* Adjust size for responsiveness */
+    height: auto;
+    animation: wave 2s ease-in-out infinite; /* Waving animation */
+}
+
+/* Right navbar (navigation links) */
+.right-navbar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 15px; /* Added gap for spacing between links */
+    flex-wrap: wrap; /* Wrap links for smaller screens */
+    padding: 10px 0; /* Padding for better alignment */
+}
+
+.right-navbar a {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px; /* Adjusted font size */
+    padding: 10px 15px; /* Adjusted padding */
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.right-navbar a:hover {
+    background-color: #555;
+    color: #f1f1f1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px; /* Compact padding for tablets */
+    }
+
+    .left-navbar h1 {
+        font-size: 22px; /* Smaller title for tablets */
+    }
+
+    .right-navbar {
+        width: 100%; /* Full width navigation */
+        justify-content: center; /* Center-align links */
+        gap: 10px; /* Adjust spacing for smaller screens */
+    }
+
+    .right-navbar a {
+        font-size: 14px; /* Reduced font size for better spacing */
+        padding: 8px 10px; /* Compact padding for links */
+    }
+
+    .indian-flag {
+        width: 30px; /* Smaller flag size */
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center-align content */
+        padding: 10px 5px;
+    }
+
+    .left-navbar {
+        margin-bottom: 10px; /* Space between logo and links */
+        padding-left: 0; /* Remove left padding */
+    }
+
+    .left-navbar h1 {
+        font-size: 20px; /* Smaller title */
+    }
+
+    .right-navbar {
+        flex-direction: column; /* Stack links vertically */
+        gap: 8px; /* Adjust gap between links */
+    }
+
+    .right-navbar a {
+        font-size: 14px; /* Compact link size */
+        padding: 8px 10px;
+    }
+
+    .indian-flag {
+        width: 25px; /* Further reduced flag size */
+    }
+}
+
+/* Waving animation */
+@keyframes wave {
+    0% {
+        transform: rotate(0deg) translateY(0) skew(0deg);
+    }
+    25% {
+        transform: rotate(3deg) translateY(5px) skew(2deg);
+    }
+    50% {
+        transform: rotate(0deg) translateY(0) skew(0deg);
+    }
+    75% {
+        transform: rotate(-3deg) translateY(-5px) skew(-2deg);
+    }
+    100% {
+        transform: rotate(0deg) translateY(0) skew(0deg);
+    }
+}
+
+.nav-right-container {
+  display: flex;
+  align-items: center;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+  margin-left: auto;
+}
+
+.hamburger span {
+  width: 30px;
+  height: 3px;
+  background: #000;
+  border-radius: 10px;
+  transition: all 0.3s linear;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 20px;
+    flex-direction: row;
+  }
+
+  .nav-right-container {
+    margin-left: auto;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .right-navbar {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: 100%;
+  }
+
+  .right-navbar.active {
+    display: flex;
+  }
+
+  .right-navbar a {
+    margin: 10px 0;
+    text-align: center;
+  }
+}
