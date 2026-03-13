@@ -1,0 +1,8 @@
+# Render Blueprint - ensures dependencies are installed before build
+# https://render.com/docs/deploy-create-react-app
+services:
+  - type: web
+    runtime: static
+    name: roshanportfolio
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./build
