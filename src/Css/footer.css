@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Parkinsans:wght@300..800&display=swap');
+
+.footer {
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer h2 {
+    font-size: 1.5rem;
+    font-family: "Parkinsans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    margin-bottom: 15px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Ensures wrapping on smaller screens */
+    gap: 10px; /* Reduced gap for smaller devices */
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 0.9rem; /* Scaled down font size */
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #3498db;
+}
+
+.footer-icon {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.footer-icon:hover {
+    transform: scale(1.2);
+}
+
+.footer-info {
+    font-size: 0.85rem; /* Adjusted font size */
+    margin-top: 15px;
+}
+
+.footer-info p {
+    margin: 5px 0;
+}
+
+.footer-info a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-info a:hover {
+    color: #3498db;
+}
+
+/* New styles for reducing the size of the phone and email icons */
+.footer-icon-phone, .footer-icon-email {
+    width: 20px; /* Reduced size */
+    height: 20px; /* Reduced size */
+    margin-right: 8px; /* Space between icon and text */
+    vertical-align: middle; /* Align icon with text */
+}
+
+.footer-content {
+    margin-top: 20px;
+}
+
+.footer-rights {
+    font-style: italic;
+    color: #ccc;
+    margin-top: 15px;
+    font-size: 0.8rem; /* Smaller text for copyright information */
+}
+
+/* Responsive design for medium screens (tablets) */
+@media (max-width: 768px) {
+    .footer h2 {
+        font-size: 1.3rem; /* Reduced heading size */
+    }
+
+    .footer-links {
+        flex-direction: row; /* Stack links vertically */
+        gap: 15px; /* Add more space between links */
+    }
+
+    .footer-info {
+        text-align: center;
+        font-size: 0.8rem; /* Further reduce text size */
+    }
+}
+
+/* Responsive design for small screens (mobile devices) */
+@media (max-width: 480px) {
+    .footer {
+        padding: 15px; /* Reduce padding for smaller screens */
+    }
+
+    .footer h2 {
+        font-size: 1.1rem; /* Smaller heading size */
+    }
+
+    .footer-links {
+        gap: 10px; /* Reduce gap further */
+    }
+
+    .footer-links a {
+        font-size: 0.8rem; /* Smaller font size for links */
+    }
+
+    .footer-icon {
+        width: 25px; /* Slightly smaller icons */
+        height: 25px;
+    }
+
+    .footer-info {
+        font-size: 0.75rem; /* Adjust font size for readability */
+    }
+
+    .footer-rights {
+        font-size: 0.7rem; /* Smaller copyright text */
+        margin-top: 10px;
+    }
+}
